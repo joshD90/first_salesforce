@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <span>{error}</span>
+    <lightning-input
+      type="text"
+      label="Book Name"
+      onchange={handleNameChange}
+    ></lightning-input>
+    <lightning-input
+      type="number"
+      label="Price in Cents"
+      onchange={handlePriceChange}
+    ></lightning-input>
+    <lightning-button
+      variant="brand"
+      label="Create Book"
+      onclick={handleClick}
+    ></lightning-button>
+    <span>{success}</span>
+  </div>
+</template>

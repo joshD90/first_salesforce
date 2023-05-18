@@ -1,7 +1,14 @@
 <template>
   <div class={currentClass}>
     <h1>Binding App Component 2</h1>
+    <h2>Welcome {name}</h2>
     <p>This is something Else</p>
+
+    <lightning-input
+      type="text"
+      label="Enter Your Name"
+      onchange={handleInputChange}
+    ></lightning-input>
     <lightning-button
       variant="brand"
       label="Start"
