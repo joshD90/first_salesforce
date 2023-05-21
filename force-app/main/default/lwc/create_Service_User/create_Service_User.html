@@ -1,0 +1,13 @@
+<template>
+  <lightning-record-form
+    object-api-name={objectApiName}
+    fields={fields}
+    onsuccess={handleSuccess}
+  >
+  </lightning-record-form>
+  <lightning-button
+    variant="Success"
+    label="Create New"
+    onclick={resetForm}
+  ></lightning-button>
+</template>

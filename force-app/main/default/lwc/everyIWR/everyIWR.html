@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="My Object Records">
+    <template if:true={objectRecords}>
+      <template for:each={objectRecords} for:item="record">
+        <div key={record.Id} class="recordContainer">
+          <!-- Display other fields as needed -->
+          <p>{record.Date__c}</p>
+          <p>{record.Details__c}</p>
+          <p>{record.Follow_Up__c}</p>
+          <div>
+            <template if:true={record.Planned__c}>
+              <p>Planned</p>
+            </template>
+            <template if:false={record.Planned__c}>
+              <p>Unplanned</p>
+            </template>
+          </div>
+        </div>
+      </template>
+    </template>
+    <template if:false={objectRecords}>
+      <p>No records found.</p>
+    </template>
+  </lightning-card>
+</template>

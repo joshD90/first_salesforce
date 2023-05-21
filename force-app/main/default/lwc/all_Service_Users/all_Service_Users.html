@@ -1,0 +1,14 @@
+<template>
+  <h1 class="">Users</h1>
+  <lightning-accordion>
+    <template for:each={serviceUserRecords} for:item="user">
+      <lightning-accordion-section label={user.Name__c} key={user.Id}>
+        <div>
+          <p>{user.Name__c}</p>
+          <p>{user.Date_Of_Birth__c}</p>
+        </div>
+        <lightning-button variant="brand-outline">See More</lightning-button>
+      </lightning-accordion-section>
+    </template>
+  </lightning-accordion>
+</template>
